@@ -2,7 +2,7 @@
 
 class SimpleGame {
     constructor() {
-        this.game = new Phaser.Game(800, 600, Phaser.AUTO, 'content');
+        this.game = new Phaser.Game(800, 600, Phaser.WEBGL, 'content');
 
         this.game.state.add('boot', this);
 
@@ -15,7 +15,8 @@ class SimpleGame {
 
     preload() {
         this.game.load.image('logo', 'phaser2.png');
-        this.game.load.image('monster', 'assets/sprite/monster.jpg');
+        this.game.load.image('monster', 'assets/sprites/monster.jpg');
+        this.game.load.audio('intro', 'assets/sound/intro.mp3');
     }
 
     create() {
@@ -34,6 +35,8 @@ class SimpleGame {
             console.log("ok");
         });
 
+        this.game.add.audio('intro', 3, false).play();
+
         this.game.add.
             tween(logo.scale)
             .to({ x: 1, y: 1 }, 2000, Phaser.Easing.Bounce.Out, true)
@@ -47,6 +50,13 @@ class SimpleGame {
     update() {
 
     }
+}
+
+interface StateInterface {
+    update();
+    preload();
+    create();
+    game: Phaser.Game
 }
 
 window.onload = () => {

@@ -1,0 +1,1 @@
+{"version":3,"file":"MoinsWeapon.js","sourceRoot":"","sources":["MoinsWeapon.ts"],"names":["MoinsWeapon","MoinsWeapon.constructor","MoinsWeapon.getTexture"],"mappings":";;;;;;AAAA,IAAM,WAAW;IAASA,UAApBA,WAAWA,UAAeA;IAAhCA,SAAMA,WAAWA;QAASC,8BAAMA;IAKhCA,CAACA;IAHGD,gCAAUA,GAAVA;QACIE,MAAMA,CAACA,cAAcA,CAACA;IAC1BA,CAACA;IACLF,kBAACA;AAADA,CAACA,AALD,EAA0B,MAAM,EAK/B"}

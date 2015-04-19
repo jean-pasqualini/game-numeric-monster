@@ -1,0 +1,1 @@
+{"version":3,"file":"PlusWeapon.js","sourceRoot":"","sources":["PlusWeapon.ts"],"names":["PlusWeapon","PlusWeapon.constructor","PlusWeapon.getTexture"],"mappings":";;;;;;AAAA,IAAM,UAAU;IAASA,UAAnBA,UAAUA,UAAeA;IAA/BA,SAAMA,UAAUA;QAASC,8BAAMA;IAK/BA,CAACA;IAHOD,+BAAUA,GAAVA;QACIE,MAAMA,CAACA,aAAaA,CAACA;IACzBA,CAACA;IACTF,iBAACA;AAADA,CAACA,AALD,EAAyB,MAAM,EAK9B"}

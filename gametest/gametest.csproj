@@ -19,8 +19,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.css" />
-    <Content Include="assets\sprite\btn.png" />
-    <Content Include="assets\sprite\monster.jpg" />
+    <Content Include="assets\sound\bg.mp3" />
+    <Content Include="assets\sound\intro.mp3" />
+    <Content Include="assets\sprites\particle.png" />
+    <Content Include="assets\sprites\weapon-plus.png" />
+    <Content Include="assets\sprites\btn.png" />
+    <Content Include="assets\sprites\monster.png" />
+    <Content Include="assets\sprites\phaser-dude.png" />
+    <Content Include="assets\sprites\weapon-bar.gif" />
+    <Content Include="assets\tilemaps\tiles\super_mario.png" />
     <Content Include="index.html" />
     <Content Include="LabelButton.js" />
     <Content Include="phaser.js" />
@@ -32,10 +39,19 @@
     <TypeScriptCompile Include="dts\p2.d.ts" />
     <TypeScriptCompile Include="dts\phaser.d.ts" />
     <TypeScriptCompile Include="dts\pixi.d.ts" />
+    <TypeScriptCompile Include="entity\Numeric.ts" />
+    <TypeScriptCompile Include="entity\Number2D.ts" />
+    <TypeScriptCompile Include="entity\Weapon.ts" />
+    <TypeScriptCompile Include="entity\WeaponBar.ts" />
+    <TypeScriptCompile Include="entity\Weapon\MoinsWeapon.ts" />
+    <TypeScriptCompile Include="entity\Weapon\PlusWeapon.ts" />
     <TypeScriptCompile Include="Other.d.ts" />
     <TypeScriptCompile Include="state\AppMenu.ts" />
+    <TypeScriptCompile Include="state\Game2dScrolling.ts" />
+    <TypeScriptCompile Include="state\GameMap.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\tilemaps\maps\default.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

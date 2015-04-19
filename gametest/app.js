@@ -1,14 +1,15 @@
 /// <reference path="dts/phaser.d.ts"/>
 var SimpleGame = (function () {
     function SimpleGame() {
-        this.game = new Phaser.Game(800, 600, Phaser.AUTO, 'content');
+        this.game = new Phaser.Game(800, 600, Phaser.WEBGL, 'content');
         this.game.state.add('boot', this);
         this.game.state.add('menu', new AppMenu());
         this.game.state.start('boot');
     }
     SimpleGame.prototype.preload = function () {
         this.game.load.image('logo', 'phaser2.png');
-        this.game.load.image('monster', 'assets/sprite/monster.jpg');
+        this.game.load.image('monster', 'assets/sprites/monster.jpg');
+        this.game.load.audio('intro', 'assets/sound/intro.mp3');
     };
     SimpleGame.prototype.create = function () {
         var logo = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'logo');
@@ -18,6 +19,7 @@ var SimpleGame = (function () {
         signal.add(function () {
             console.log("ok");
         });
+        this.game.add.audio('intro', 3, false).play();
         this.game.add.tween(logo.scale).to({ x: 1, y: 1 }, 2000, Phaser.Easing.Bounce.Out, true).onComplete.add(function () {
             this.game.state.start('menu');
         }, this);
