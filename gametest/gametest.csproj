@@ -47,8 +47,10 @@
     <TypeScriptCompile Include="entity\Weapon\PlusWeapon.ts" />
     <TypeScriptCompile Include="Other.d.ts" />
     <TypeScriptCompile Include="state\AppMenu.ts" />
+    <TypeScriptCompile Include="state\AppTest.ts" />
     <TypeScriptCompile Include="state\Game2dScrolling.ts" />
     <TypeScriptCompile Include="state\GameMap.ts" />
+    <TypeScriptCompile Include="state\GameOver.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\tilemaps\maps\default.json" />

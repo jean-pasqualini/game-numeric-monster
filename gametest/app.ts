@@ -1,6 +1,8 @@
 ﻿/// <reference path="dts/phaser.d.ts"/>
 
 class SimpleGame {
+    game: Phaser.Game;
+
     constructor() {
         this.game = new Phaser.Game(800, 600, Phaser.WEBGL, 'content');
 
@@ -8,10 +10,13 @@ class SimpleGame {
 
         this.game.state.add('menu', new AppMenu());
 
-        this.game.state.start('boot');
+        if (document.location.hash.indexOf("prod") != -1) {
+            this.game.state.start('boot');
+        } else {
+            this.game.state.add('test', new AppTest(), true);
+          // this.game.state.add('2dScrolling', new Game2dScrolling(), true);
+        }
     }
-
-    game: Phaser.Game;
 
     preload() {
         this.game.load.image('logo', 'phaser2.png');

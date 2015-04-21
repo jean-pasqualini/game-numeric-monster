@@ -16,11 +16,11 @@
    <property name="time" value="1000"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJztl+tOwzAMhTvusFHKfdwHjML7PyFGaiTLc+Jc16z4x6dFjeOcuD5rO2uaZqYoiqIoE2YP2AcOMuRIzaP6VX9KnsMKzngEHAMnHme15TQ5XHlUv+ovqf8UOIvQ74N0Rhtz4ay57lcp/a5cOfRz9fHVv8isfx6gZyr1lzgvoD+FduT9t8WFgC02pT6ha216zFw7wM1PjW5AirusQKui1EzXqJ9Kc1WBBqU8XbMbfuLeuxeOudqIfe+K/YZx1c1wLcTbxlMm5ZzUS7F+ukGUOiftR/M+jn9L7HsL3BWI9SHH2Ww+tn1btR5jmifkPK74zjKWoL0bspZqi60356VYP90DS+DBY/1jhNaSSB54Ap499dPYGqmt/gbOE1w/Uv1c7/r2cm7tPn6i+qmf/p5JLwjXM+oVeANWkbpDesH3WSF5AM9L+qVcY/fyNusfgssT+BrVb+tdWz8b/anvEXi9y0t0f67+1E/LgXc05upvcn0An8I9XQNfiN6ihcb36Brtbdt3CI5bkz3xvI9+E5tDfwyc/rHqH+OlDu1Jr1P9rt6l13s0XjWbvRGq36yXvMT9F9D6U88ZD32jMVf/H2UDU8McObTGWof/jvqpvnruCr+Hkme8
+   eJztl+tOwzAMhTvusFHKfdwHjML7PyFGaiTLc+Jc16z4x6dFjeOcuD5rO2uaZqYoiqIoE2YP2AcOMuRIzaP6VX9KnsMKzngEHAMnHme15TQ5XHlUv+ovqf8UOIvQ74N0Rhtz4ay57lcp/a5cOfRz9fHVv8isfx6gZyr1lzgvoD+FduT9t8WFgC02pT6ha216zFw7wM1PjW5AirusQKui1EzXqJ9Kc1WBBqU8XbMbfuLeuxeOuVhKvT/G5o39hnHVzXAtxNvGUyblnNRLsX66QZQ6J+1H8z6Of0vsewvcFYj1IcfZbD62fVu1HmOaJ+Q8rvjOMpagvRuylmqLrTfnpVg/3QNL4MFj/WOE1pJIHngCnj3109gaqa3+Bs4TXD9S/Vzv+vZybu0+fqL6qZ/+nkkvCNcz6hV4A1aRukN6wfdZIXkAz0v6pVxj9/I26x+CyxP4GtVv611bPxv9qe8ReL3LS3R/rv7UT8uBdzTm6m9yfQCfwj1dA1+I3qKFxvfoGu1t23cIjluTPfG8j34Tm0N/DJz+seof46UO7UmvU/2u3qXXezReNZu9EarfrJe8xP0X0PpTzxkPfaMxV/8fZQNTwxw5tMZah/+O+qm+eu4Kv6yJZ8k=
   </data>
  </layer>
  <objectgroup name="objetsmap">
   <object id="1" type="Monster" x="352" y="128"/>
-  <object id="2" type="Monster" x="464" y="160"/>
+  <object id="2" type="Monster" x="544" y="208"/>
  </objectgroup>
 </map>

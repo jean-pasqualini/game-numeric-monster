@@ -25,6 +25,7 @@ var Number2D = (function (_super) {
             var emitter = this.game.add.emitter(this.x, this.y);
             emitter.makeParticles('particle', 1, 100, false, false);
             emitter.explode(10000, 500);
+            this.kill();
             this.destroy();
             return;
         }

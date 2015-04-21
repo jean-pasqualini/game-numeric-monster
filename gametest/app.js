@@ -4,7 +4,12 @@ var SimpleGame = (function () {
         this.game = new Phaser.Game(800, 600, Phaser.WEBGL, 'content');
         this.game.state.add('boot', this);
         this.game.state.add('menu', new AppMenu());
-        this.game.state.start('boot');
+        if (document.location.hash.indexOf("prod") != -1) {
+            this.game.state.start('boot');
+        }
+        else {
+            this.game.state.add('test', new AppTest(), true);
+        }
     }
     SimpleGame.prototype.preload = function () {
         this.game.load.image('logo', 'phaser2.png');

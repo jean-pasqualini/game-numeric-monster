@@ -29,6 +29,8 @@
 
             emitter.explode(10000, 500);
 
+            this.kill();
+
             this.destroy();
 
             return;

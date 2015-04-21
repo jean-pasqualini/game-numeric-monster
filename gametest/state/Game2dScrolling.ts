@@ -15,10 +15,10 @@
         if (this.init) {
             this.game.physics.arcade.collide(this.player, this.layer);
             this.game.physics.arcade.collide(this.monsters, this.layer);
-            //this.game.physics.arcade.collide(this.monsters, this.player);
+           // this.game.physics.arcade.collide(this.monsters, this.player);
             this.game.physics.arcade.collide(this.player, this.monsters, this.onPlayerCollideWithMonster, undefined, this);
 
-            this.monsters.setAll("body.velocity.x", 0);
+           // this.monsters.setAll("body.velocity.x", 0);
 
             this.player.body.velocity.x = 0;
 
@@ -56,6 +56,10 @@
     render() {
         //this.game.debug.bodyInfo(this.player, 32, 320);
         this.game.debug.body(this.player);
+        this.monsters.forEach(function (monster) {
+            this.game.debug.body(monster);
+            this.game.debug.spriteInfo(monster, 32, 320);
+        }, this);
 
         //this.game.time.advancedTiming = true;
         //this.game.debug.text(this.game.time.fps || '--', 2, 14, "#ffffff");
@@ -63,7 +67,13 @@
     }
 
     create() {
-        this.monsters = this.game.add.group(this.game.world, "monsters", true, true, Phaser.Physics.ARCADE);
+        this.monsters = this.game.add.group();
+        //this.monsters.enableBody = true;
+        //this.monsters.physicsBodyType = Phaser.Physics.ARCADE;
+
+        //this.game.world, "monsters", false, true, Phaser.Physics.ARCADE
+
+      //  this.monsters.x = 0;
 
        // Phaser.Canvas.setSmoothingEnabled(this.game.context, false);
 
@@ -78,8 +88,6 @@
         var map = this.game.add.tilemap('default');
 
         map.addTilesetImage('SuperMarioBros-World1-1', 'tiles');
-
-        map.createFromObjects("objetsmap", 12, "monster", 0, true, false, this.monsters, Number2D);
 
         map.setCollisionBetween(15, 16);
         map.setCollisionBetween(20, 25);
@@ -135,18 +143,35 @@
 
     addMonsters(map: Phaser.Tilemap) {
 
-        var sprite;
+        var monster;
 
         for (var i = 0, len = map.objects["objetsmap"].length; i < len; i++) {
-            sprite = new Number2D(this.game, new Numeric(3), map.objects["objetsmap"][i].x * 2, map.objects["objetsmap"][i].y);
+            /**
+            var other = this.monsters.create(map.objects["objetsmap"][i].x * 2, map.objects["objetsmap"][i].y * 2, "monster", 3, true);
+
+            other.scale = new Phaser.Point(0.5, 0.5); 
+            */
+            
+            monster = new Number2D(this.game, new Numeric(this.game.rnd.integerInRange(1, 9)), map.objects["objetsmap"][i].x * 2, map.objects["objetsmap"][i].y * 2);
+
+            monster.anchor.setTo(0.5, 0.5);
+
+            monster.exists = true;
 
             console.log("monster : " + map.objects["objetsmap"][i].x + ", " + map.objects["objetsmap"][i].y);
 
-            this.game.physics.enable(sprite);
+            this.game.physics.enable(monster);
+
+            monster.y -= (monster.body.height / 2);
+            //monster.body.bounce.y = 0.2;
+            monster.body.linearDamping = 1;
+            monster.body.collideWorldBounds = true;
 
             //sprite.body.collides([this.player]);
 
-            this.monsters.add(sprite);
+            this.monsters.add(monster);
+           
+
 
 
         }
